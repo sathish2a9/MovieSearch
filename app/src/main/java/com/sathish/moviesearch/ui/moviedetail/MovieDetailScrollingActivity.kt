@@ -76,6 +76,7 @@ class MovieDetailScrollingActivity : AppCompatActivity(), KodeinAware {
                     dataBind.progressBar.hide()
                     dataBind.cardViewMovieDetail.show()
                     state.data.let {
+                        dataBind.textTitle.text = "Title: ${it.title}"
                         dataBind.textYear.text = "Year: ${it.year}"
                         dataBind.textCategories.text = "Categories: ${it.runtime}"
                         dataBind.textStar.text = "${it.imdbrating}"

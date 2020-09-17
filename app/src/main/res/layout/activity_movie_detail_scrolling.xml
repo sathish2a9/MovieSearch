@@ -93,16 +93,27 @@
                             android:layout_height="wrap_content">
 
                             <TextView
+                                android:id="@+id/text_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/calibri"
+                                android:text="Title: --"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
                                 android:id="@+id/text_year"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="10dp"
                                 android:fontFamily="@font/calibri"
                                 android:text="Year: --"
                                 android:textColor="#000000"
                                 android:textSize="18sp"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toBottomOf="@+id/text_title" />
 
                             <View
                                 android:id="@+id/view1"
@@ -161,6 +172,7 @@
                                 android:fontFamily="@font/calibri"
                                 android:textColor="#000000"
                                 android:textSize="18sp"
+                                app:layout_constraintHorizontal_bias="0"
                                 app:layout_constrainedWidth="true"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/tv_synopsis"
@@ -237,6 +249,7 @@
                                 android:textColor="#000000"
                                 android:textSize="18sp"
                                 app:layout_constrainedWidth="true"
+                                app:layout_constraintHorizontal_bias="0"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/tv_director"
                                 app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -263,6 +276,7 @@
                                 android:paddingRight="5dp"
                                 android:textColor="#000000"
                                 android:textSize="18sp"
+                                app:layout_constraintHorizontal_bias="0"
                                 app:layout_constrainedWidth="true"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/tv_writer"
@@ -292,6 +306,7 @@
                                 android:textSize="18sp"
                                 app:layout_constrainedWidth="true"
                                 app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0"
                                 app:layout_constraintStart_toEndOf="@+id/tv_actor"
                                 app:layout_constraintTop_toBottomOf="@+id/text_writer" />
 
