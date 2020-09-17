@@ -77,14 +77,21 @@ class MovieDetailScrollingActivity : AppCompatActivity(), KodeinAware {
                     dataBind.cardViewMovieDetail.show()
                     state.data.let {
                         dataBind.textYear.text = "Year: ${it.year}"
-                        dataBind.textDirector.text = "Director: ${it.director}"
-                        dataBind.textWriter.text = "Writer: ${it.writer}"
+                        dataBind.textCategories.text = "Categories: ${it.runtime}"
+                        dataBind.textStar.text = "${it.imdbrating}"
+                        dataBind.textScore.text = "Score\n${it.imdbrating}"
+                        dataBind.textReviews.text = "Reviews\n${it.imdbvotes}"
+                        dataBind.textPopularity.text = "Popularity\n${it.metascore}"
                         dataBind.textPlot.text = it.plot
-                        if (it.ratings.isNotEmpty())
+                        dataBind.textDirector.text = it.director
+                        dataBind.textWriter.text = it.writer
+                        dataBind.textActor.text = it.actors
+
+                       /* if (it.ratings.isNotEmpty())
                             dataBind.textImd.text =
                                 "Internet Movie Database: ${it.ratings[0].value}"
                         dataBind.textMetascore.text = "Metascore: ${it.metascore}"
-                        dataBind.textImdbRating.text = "IMBD Rating: ${it.imdbrating}"
+                        dataBind.textImdbRating.text = "IMBD Rating: ${it.imdbrating}"*/
                     }
                 }
                 is State.Error -> {
